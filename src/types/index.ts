@@ -53,3 +53,14 @@ export type TabParamList = {
   Messages: undefined;
   Contacts: undefined;
 };
+
+// 全局类型声明
+declare global {
+  var require: any;
+  
+  namespace NodeJS {
+    interface Global {
+      require?: any;
+    }
+  }
+}
